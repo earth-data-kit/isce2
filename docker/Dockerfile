@@ -55,11 +55,14 @@ RUN set -ex \
     libopencv-core4.2 \
     libopencv-highgui4.2 \
     libopencv-imgproc4.2 \
+    python3-pip \
     python3-gdal \
     python3-h5py \
     python3-numpy \
     python3-scipy \
  && echo done
+
+RUN pip3 install requests
 
 # install ISCE from DEB
 COPY --from=builder /tmp/isce*.deb /tmp/isce2.deb
