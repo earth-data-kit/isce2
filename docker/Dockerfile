@@ -63,6 +63,10 @@ RUN set -ex \
  && echo done
 
 RUN pip3 install requests
+RUN apt-get install -y wget unzip curl git
+
+RUN mkdir -p /tmp/repos/
+RUN git clone https://github.com/earth-data-kit/isce2.git /tmp/repos/isce2
 
 # install ISCE from DEB
 COPY --from=builder /tmp/isce*.deb /tmp/isce2.deb
