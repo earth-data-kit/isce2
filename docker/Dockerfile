@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as builder
+FROM ubuntu:20.04 AS builder
 
 # Set an encoding to make things work smoothly.
 ENV LANG en_US.UTF-8
