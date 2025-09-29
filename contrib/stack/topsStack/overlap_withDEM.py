@@ -43,7 +43,7 @@ def cmdLineParse(iargs=None):
 
 
 def multilook(intName, alks=5, rlks=15):
-    cmd = 'looks.py -i {0} -a {1} -r {2}'.format(intName,alks,rlks)
+    cmd = 'looks_withDEM.py -i {0} -a {1} -r {2}'.format(intName,alks,rlks)
     flag = os.system(cmd)
 
     if flag:
